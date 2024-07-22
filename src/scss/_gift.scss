@@ -1,62 +1,74 @@
 .gift {
-    
-    padding-bottom: 115px;
+  padding-bottom: 115px;
 
-    &__wrapper {
-        display: flex;
-        gap: 110px;
-        align-items: center;
+  &__wrapper {
+    display: flex;
+    gap: 110px;
+    align-items: center;
 
-        @include laptop {
-            gap: 40px;
-        }
+    @include laptop {
+      gap: 40px;
     }
 
-    &__icon {
+    @include tablet {
+      flex-direction: column-reverse;
+    }
+  }
 
-        @include laptop {
-            height: 270px;
-            width: 230px;
-        }
+  &__icon {
+    width: 381px;
+    @include laptop {
+      width: 292px;
     }
 
-    &__title {
-        @include laptop {
-            font-size: 48px;
-            line-height: 110%;
-            margin-bottom: 0;
-        }
+    @include tablet {
+      width: 194px;
+    }
+  }
 
-        @include tablet {
-            font-size: 40px;
-            line-height: 110%;
-        }
-
-        &-subtext {
-        
-            @include laptop {
-                margin-bottom: 30px;
-            }
-        }
+  &__title {
+    margin-bottom: 24px;
+    @include laptop {
+      font-size: 48px;
+      line-height: 1.1;
+      margin-bottom: 16px;
     }
 
-    &__text {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+    @include tablet {
+      font-size: 40px;
     }
 
-    &__button {
-        width: 320px;
-        height: 64px;
-        font-size: 20px;
-        line-height: 120%;
-
-        @include laptop {
-            font-size: 16px;
-            line-height: 120%;
-            height: 43px;
-            width: 220px;
-        }
+    @include mobile {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 8px;
     }
+
+    &-subtext {
+      margin-bottom: 52px;
+      @include laptop {
+        margin-bottom: 40px;
+      }
+
+      @include mobile {
+        text-align: center;
+      }
+    }
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto;
+    width: 320px;
+    height: 64px;
+    font-size: 20px;
+    line-height: 1.2;
+
+    @include laptop {
+      font-size: 16px;
+      line-height: 120%;
+      height: 43px;
+      width: 220px;
+    }
+  }
 }

@@ -1,176 +1,184 @@
 .intensive-program {
+  padding-top: 140px;
 
-    padding-top: 140px;
+  @include laptop {
+    padding-top: 100px;
+  }
 
-    @include laptop {
-        padding-top: 100px;
-    }
-
-    &__wrapper {
-        background-color: $planBG;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 80px 158px;
-        border-radius: 32px;
-
-        @include laptop {
-            padding: 60px 40px;
-        }
-
-        @include tablet {
-            padding: 60px 40px;
-        }
-    }
-
-    &__title {
-        text-align: center;
-        color: $white;
-        margin-bottom: 73px;
-
-        @include laptop {
-            font-size: 48px;
-            line-height: 110%;
-            margin-bottom: 50px;
-        }
-    }
-
-    &__subtitle {
-        padding-top: 24px;
-        display: block;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 24px;
-        width: 592px;
-
-        @include laptop {
-            font-size: 16px;
-            line-height: 120%;
-        }
-    }
-
-    &__list {
-        display: flex;
-        justify-content: center;
-        gap: 39px 20px;
-        flex-wrap: wrap;
-        margin-bottom: 60px;
-
-        @include laptop {
-            margin-bottom: 32px;
-        }
-    }
-
-    &__item {
-        width: 486px;
-        padding: 56px 30px 32px 30px;
-        background-color: $white;
-        border-radius: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 20px;
-        position: relative;
-
-        @include laptop {
-            padding: 37px 27px 32px 27px;
-            width: 370px;
-        }
-
-        @include tablet {
-            padding: 44px 32px 32px 32px;
-        }
-
-        &-counter {
-            position: absolute;
-            top: -23px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: $primary;
-            font-size: 20px;
-            font-weight: 700;
-            line-height: 24px;
-            background-color: $programCounter;
-            border-radius: 50px;
-            width: 120px;
-            padding: 11px 30px;
-
-            @include laptop {
-                font-size: 16px;
-                line-height: 120%;
-                width: 106px;
-            }
-        }
-
-        &-title {
-            font-size: 40px;
-            font-weight: 400;
-            line-height: 44px;
-
-            @include laptop {
-                font-size: 28px;
-                line-height: 110%;
-            }
-        }
-        
-    };
-
-    &__form {
-        width: 100%;
-    }
-
-}
-.program-wrapper {
+  &__wrapper {
+    background-color: $planBG;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-.program-list {
+    align-items: center;
+    padding: 80px 158px;
+    border-radius: 32px;
 
-    &__item {
-        background-image: url(../img/dot.png);
-        background-position: 0 8px;
-        background-size: 5px 5px;
-        background-repeat: no-repeat;
-        padding-left: 13px;
-        margin-bottom: 4px;
+    @include laptop {
+      padding: 60px 40px;
     }
 
-    &__item:last-child {
-        margin-bottom: 0;
+    @include tablet {
+      padding: 60px 40px;
     }
 
-    &__text {
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 24px;
-
-        @include laptop {
-            font-size: 16px;
-            line-height: 120%;
-        }
+    @include mobile {
+      padding: 40px 20px;
     }
-}
+  }
 
-.program-result {
+  &__title {
+    text-align: center;
+    color: $white;
+    margin-bottom: 73px;
+
+    @include laptop {
+      font-size: 48px;
+      line-height: 110%;
+      margin-bottom: 50px;
+    }
+
+    @include mobile {
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 1.1;
+      text-align: center;
+      color: #fff;
+    }
+  }
+
+  &__subtitle {
+    padding-top: 24px;
+    display: block;
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
-    background-color: $headerItemBG;
-    border-radius: 8px;
-    padding: 10px 12px;
 
     @include laptop {
-        font-size: 16px;
-        line-height: 120%;
+      font-size: 16px;
+      line-height: 120%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 39px 20px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+
+    @include laptop {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__item {
+    max-width: 486px;
+    padding: 56px 32px 32px;
+    background-color: $white;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+
+    @include laptop {
+      max-width: 380px;
+
+      padding: 40px 32px 32px;
     }
 
-    &__title {
-        background-image: url(../img/star.png);
-        background-position: 0 5px;
-        background-size: 16px 16px;
-        background-repeat: no-repeat;
-        padding-left: 22px;
-        margin-bottom: 10px;
+    @include mobile {
+      padding: 32px 16px 20px;
     }
+
+    &-counter {
+      position: absolute;
+      top: -23px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: $primary;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      background-color: $programCounter;
+      border-radius: 50px;
+      width: 120px;
+      padding: 11px 30px;
+
+      @include laptop {
+        font-size: 16px;
+        line-height: 120%;
+        width: 106px;
+      }
+    }
+
+    &-title {
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 44px;
+
+      @include laptop {
+        font-size: 28px;
+        line-height: 110%;
+      }
+    }
+  }
+
+  &__form {
+    width: 100%;
+  }
+}
+.program-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.program-list {
+  &__item {
+    background-image: url(../img/dot.png);
+    background-position: 0 8px;
+    background-size: 5px 5px;
+    background-repeat: no-repeat;
+    padding-left: 13px;
+    margin-bottom: 4px;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+
+    @include laptop {
+      font-size: 16px;
+      line-height: 120%;
+    }
+  }
+}
+
+.program-result {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  background-color: $headerItemBG;
+  border-radius: 8px;
+  padding: 10px 12px;
+
+  @include laptop {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  &__title {
+    background-image: url(../img/star.png);
+    background-position: left;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    padding-left: 22px;
+    margin-bottom: 10px;
+  }
 }

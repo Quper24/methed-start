@@ -1,26 +1,2 @@
 .project-view {
-
-    padding-bottom: 140px;
-
-    &__title {
-        margin-bottom: 40px;
-    }
-
-    &__frame {
-        border-radius: 32px;
-        max-height: 100%;
-        overflow-y: auto;
-        background-image: url(../img/scroll-pic.png);
-        background-repeat: no-repeat;
-        width: 1320px;//на  
-        height: 780px;//время
-
-        @include laptop {
-            background-image: url(../img/scroll-pic768.png);
-            width: auto;//на 
-            height: 546px;//время
-        }
-    }
-    }
-
-    
+}

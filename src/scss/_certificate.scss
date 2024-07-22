@@ -1,67 +1,88 @@
 .certificate {
-    background-color: $headerItemBG;
-    height: 603px;
+  background-color: $headerItemBG;
 
-    &__wrapper {
-        display: flex;
+  &__wrapper {
+    display: flex;
+
+    @include laptop {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    flex-basis: 744px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include laptop {
+      flex-basis: 538px;
     }
 
-    &__text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    @include tablet {
+      flex-basis: auto;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    padding-top: 30px;
+    margin-bottom: 52px;
+
+    @include laptop {
+      padding-top: 65px;
+      font-size: 46px;
+      line-height: 1.1;
     }
 
-    &__title {
-        padding-top: 30px;
-        margin-bottom: 52px;
+    @include mobile {
+      font-size: 28px;
+    }
+  }
 
-        @include laptop {
-            padding-top: 65px;
-            font-size: 46px;
-            line-height: 110%;
-        }
+  &__subtitle {
+    &-text {
+      padding-top: 24px;
+      display: block;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #605f5f;
+
+      @include laptop {
+        font-size: 16px;
+        line-height: 120%;
+        padding-top: 0;
+      }
+
+      @include mobile {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.2;
+        text-align: center;
+      }
+    }
+  }
+
+  &__button {
+    width: 256px;
+    height: 64px;
+
+    @include laptop {
+      width: 220px;
+      height: 43px;
+      align-self: center;
+    }
+  }
+
+  &__image {
+    @include laptop {
+      max-width: 344px;
     }
 
-    &__subtitle {
-
-        &-text {
-            padding-top: 24px;
-            display: block;
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 24px;
-
-            @include laptop {
-                font-size: 16px;
-                line-height: 120%;
-                padding-top: 0;
-            }
-        }
+    &-photo {
+      width: 100%;
     }
-
-    &__button {
-        width: 256px;
-        height: 64px;
-
-        @include laptop {
-            width: 220px;
-            height: 43px;
-        }
-    }
-
-    &__image {
-        
-        @include laptop {
-            padding-top: 80px;
-        }
-
-        &-photo {
-            width: 900px;
-
-            @include laptop {
-                width: 740px;
-            }
-        }
-    }
+  }
 }
