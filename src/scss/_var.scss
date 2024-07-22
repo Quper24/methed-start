@@ -1,0 +1,48 @@
+$primary: #1e212a;
+$primaryLight: #fd883e;
+$primaryDark: #605f5f;
+
+$secondary: #ffffff;
+$secondaryDark: #6b6b6b;
+
+$headerItemBG: #f2f1f1;
+$planBG: #2b2f3a;
+$planPrice: #96979b;
+$planText: #ffc718;
+
+$programCounter: #fad127;
+
+$superHeroBG: #f2f1f1;
+
+$registerList: #3d424e;
+$registerInputBG: #f1f1f1;
+$registerInputPlaceholder: #a0a0a0;
+
+$sliderButtonText: #fd883e;
+
+$footerText: #e2e2e2;
+
+$black: #292121;
+$white: #fff;
+
+$mobile: 560px;
+$tablet: 960px;
+$laptop: 1200px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: #{$laptop}) {
+    @content;
+  }
+}

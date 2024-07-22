@@ -1,0 +1,67 @@
+.certificate {
+    background-color: $headerItemBG;
+    height: 603px;
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title {
+        padding-top: 30px;
+        margin-bottom: 52px;
+
+        @include laptop {
+            padding-top: 65px;
+            font-size: 46px;
+            line-height: 110%;
+        }
+    }
+
+    &__subtitle {
+
+        &-text {
+            padding-top: 24px;
+            display: block;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+
+            @include laptop {
+                font-size: 16px;
+                line-height: 120%;
+                padding-top: 0;
+            }
+        }
+    }
+
+    &__button {
+        width: 256px;
+        height: 64px;
+
+        @include laptop {
+            width: 220px;
+            height: 43px;
+        }
+    }
+
+    &__image {
+        
+        @include laptop {
+            padding-top: 80px;
+        }
+
+        &-photo {
+            width: 900px;
+
+            @include laptop {
+                width: 740px;
+            }
+        }
+    }
+}

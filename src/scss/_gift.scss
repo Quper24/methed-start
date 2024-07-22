@@ -1,0 +1,62 @@
+.gift {
+    
+    padding-bottom: 115px;
+
+    &__wrapper {
+        display: flex;
+        gap: 110px;
+        align-items: center;
+
+        @include laptop {
+            gap: 40px;
+        }
+    }
+
+    &__icon {
+
+        @include laptop {
+            height: 270px;
+            width: 230px;
+        }
+    }
+
+    &__title {
+        @include laptop {
+            font-size: 48px;
+            line-height: 110%;
+            margin-bottom: 0;
+        }
+
+        @include tablet {
+            font-size: 40px;
+            line-height: 110%;
+        }
+
+        &-subtext {
+        
+            @include laptop {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__button {
+        width: 320px;
+        height: 64px;
+        font-size: 20px;
+        line-height: 120%;
+
+        @include laptop {
+            font-size: 16px;
+            line-height: 120%;
+            height: 43px;
+            width: 220px;
+        }
+    }
+}

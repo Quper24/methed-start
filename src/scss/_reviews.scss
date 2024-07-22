@@ -1,0 +1,53 @@
+.reviews {
+    padding: 70px 0 140px 0;
+
+    &__title {
+        // margin-bottom: 80px;
+    }
+
+    &__slider {
+
+
+        &-list {
+            display: flex;
+            gap: 70px;
+            padding: 55px 39px 0 39px;
+        }
+
+        &-item {
+            position: relative;
+            padding: 32px;
+            background-color: $superHeroBG;
+            border-radius: 32px;
+            min-width: 359px;
+        }
+
+        &-avatar {
+            height: 54px;
+            width: 54px;
+            position: absolute;
+            top: -43px;
+            left: -36px;
+        }
+
+        &-title {
+            color: $primary;
+            margin-bottom: 10px;
+        }
+
+        &-text {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 120%;
+            color: $primaryDark;
+            margin-bottom: 10px;
+        }
+
+        &-button {
+            font-size: 21px;
+            color: $sliderButtonText;
+            border: none;
+        }
+
+    }
+}

@@ -1,0 +1,23 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 0;
+
+  @include mobile {
+    padding: 24px 0;
+  }
+
+  &__logo {
+    width: 300px;
+
+    @include laptop {
+      width: 220px;
+    }
+
+    @include mobile {
+      width: 134px;
+    }
+  }
+}

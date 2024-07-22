@@ -1,0 +1,142 @@
+html {
+  position: relative;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Circe", sans-serif;
+  color: $primary;
+  background-color: $white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset {
+  margin: 0;
+}
+
+iframe {
+  border: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.section {
+  padding: 70px 0;
+
+  @include laptop {
+    padding: 50px 0;
+  }
+}
+
+.container {
+  max-width: 1420px;
+  padding: 0 50px;
+  margin: 0 auto;
+
+  @include laptop {
+    max-width: 1024px;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+}
+
+.promo {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  margin-bottom: 20px;
+
+  @include laptop {
+    margin-bottom: 16px;
+  }
+
+  &-price {
+    text-decoration: line-through;
+    color: $planPrice;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 30.8px;
+
+    @include laptop {
+      font-size: 20px;
+      line-height: 110%;
+    }
+  }
+
+  &-text {
+    color: $planText;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 44px;
+
+    @include laptop {
+      font-size: 28px;
+      line-height: 110%;
+    }
+  }
+}
+
+.form {
+  &__button {
+    color: $primary;
+    width: 100%;
+    padding: 20px 10px;
+    border-radius: 8px;
+    background-color: $planText;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    border-color: transparent;
+
+    @include laptop {
+      height: 43px;
+      padding: 12px 10px;
+      font-size: 16px;
+      line-height: 120%;
+    }
+  }
+}

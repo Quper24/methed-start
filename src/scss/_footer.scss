@@ -1,0 +1,36 @@
+.footer {
+    background-color: $planBG;
+    padding: 80px 0 44px 0;
+    color: $footerText;
+    
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        margin-bottom: 90px;
+    }
+
+    &__copyright {
+
+        &-text {
+            font-size: 20px;
+        }
+    }
+
+    &__social {
+
+        &-list {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        &-text {
+            font-size: 20px;
+            line-height: 120%;
+            width: 300px;
+        }
+    }
+}

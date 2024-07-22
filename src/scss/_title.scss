@@ -1,0 +1,78 @@
+.title {
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 66px;
+  margin-bottom: 24px;
+  position: relative;
+
+  @include laptop {
+    font-size: 48px;
+    line-height: 80%;
+    margin-bottom: 20px;
+  }
+
+  @include tablet {
+    font-size: 40px;
+    line-height: 100%;
+  }
+
+  &-subtext {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 52px;
+
+    @include laptop {
+      font-size: 16px;
+      line-height: 120%;
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 120%;
+    }
+  }
+
+  &-text {
+    @include laptop {
+      margin-bottom: 16px;
+    }
+
+    &_subtitle {
+      display: block;
+    }
+
+    &_promo {
+      display: inline-block;
+      height: 54px;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 28.6px;
+      padding: 14px 20px 11px 20px;
+      border-radius: 64px;
+      vertical-align: middle;
+      background: linear-gradient(
+        244.87deg,
+        rgba(250, 209, 38, 0.996) 10.67%,
+        #ff544f 173.75%
+      );
+
+      @include laptop {
+        height: 47px;
+        font-size: 20px;
+        line-height: 110%;
+      }
+
+      @include tablet {
+        height: 38px;
+        font-size: 16px;
+        line-height: 110%;
+      }
+    }
+
+    &_orange {
+      color: $primaryLight;
+    }
+  }
+}

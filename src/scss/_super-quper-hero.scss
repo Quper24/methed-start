@@ -1,0 +1,92 @@
+.superhero-Max {
+
+    background-color: $superHeroBG;
+    padding: 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 95px 0 0 0;
+        position: relative;
+
+        @include laptop {
+            padding: 70px 0 0 0;
+        }
+    }
+
+    &__about {
+        width: 700px;
+        padding-left: 50px;
+
+        @include laptop {
+            padding-left: 25px;
+        }
+
+        @include tablet {
+            padding-left: 0;
+        }
+
+        &-wrapper {
+            margin-bottom: 50px;
+    
+            @include laptop {
+                margin-bottom: 10px;
+            }
+        }
+
+        &-title {
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 44px;
+
+            @include laptop {
+                font-size: 28px;
+                line-height: 110%;
+            }
+        }
+    }
+
+    &__photo {
+        display: block;
+        width: 585px;
+        
+        @include laptop {
+            width: 640px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 40px;
+
+        @include laptop {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__profession-text {
+        padding-top: 7px;
+        display: block;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+
+        @include laptop {
+            font-size: 16px;
+            line-height: 120%;
+        }
+    }
+
+    &__subtext {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 12px;
+
+
+        @include laptop {
+            font-size: 16px;
+            line-height: 120%;
+        }
+    }
+
+}
