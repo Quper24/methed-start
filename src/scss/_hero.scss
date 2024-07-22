@@ -79,19 +79,19 @@
     background-position: left 15px center;
     background-repeat: no-repeat;
 
-    @include laptop {
-      padding: 8px 15px 8px 47px;
-      font-size: 16px;
-    }
-
     &_date {
       background-image: url("/img/clock.svg");
     }
     &_practice {
-      background-image: url("/img/clock.svg");
+      background-image: url("/img/monitor.svg");
     }
     &_curator {
-      background-image: url("/img/clock.svg");
+      background-image: url("/img/frame.svg");
+    }
+
+    @include laptop {
+      padding: 8px 15px 8px 47px;
+      font-size: 16px;
     }
   }
 

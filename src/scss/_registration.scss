@@ -1,4 +1,215 @@
-.registration-input {
+.registration {
+  padding: 140px 0 70px 0;
+
+  @include laptop {
+    padding: 80px 0 70px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 50px;
+    background-color: $planBG;
+    border-radius: 32px;
+    padding: 80px 60px;
+
+    @include laptop {
+      padding: 60px 40px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      padding: 40px 20px;
+    }
+  }
+
+  &__text {
+    max-width: 616px;
+
+    @include laptop {
+      max-width: 447px;
+    }
+
+    @include tablet {
+      max-width: 100%;
+    }
+
+    &-title {
+      color: $white;
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 24px;
+
+      @include laptop {
+        font-size: 48px;
+        margin-bottom: 16px;
+      }
+
+      @include tablet {
+        font-size: 40px;
+      }
+
+      @include mobile {
+        font-size: 28px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__promo {
+    margin-bottom: 52px;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__item {
+      display: flex;
+      gap: 8px;
+      padding: 12px 18px 12px 52px;
+      border-radius: 64px;
+      background-color: $registerList;
+      margin-bottom: 8px;
+      color: $white;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      background-position: left 20px center;
+      background-repeat: no-repeat;
+
+      &_date {
+        background-image: url("/img/clock-w.svg");
+      }
+      &_practice {
+        background-image: url("/img/monitor-w.svg");
+      }
+      &_curator {
+        background-image: url("/img/frame-w.svg");
+      }
+      &_message {
+        background-image: url("/img/messages-w.svg");
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__form-wrapper {
+    border-radius: 32px;
+    background-color: $white;
+    overflow: hidden;
+  }
+
+  &__bottom-form {
+    padding: 40px 32px;
+
+    @include laptop {
+      padding: 28px 24px;
+    }
+
+    @include tablet {
+      padding: 20px 12px 24px;
+    }
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__form-title {
+    color: $primary;
+    font-family: Circe;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.1;
+    padding: 20px 30px;
+    background: linear-gradient(
+      244.87deg,
+      rgba(250, 209, 38, 0.996) 10.67%,
+      #ff544f 173.75%
+    );
+    text-align: center;
+
+    @include laptop {
+      font-size: 28px;
+      padding: 16px 24px;
+    }
+
+    @include mobile {
+      padding: 11px 5px;
+      font-size: 22px;
+    }
+  }
+
+  &__form-fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+    border: none;
+    padding: 0;
+    gap: 8px;
+    margin-bottom: 8px;
+
+    @media (max-width: 1040px) {
+      grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(auto-fill, minmax(266px, 1fr));
+    }
+  }
+
+  &__form-email {
+    flex-basis: 100%;
+  }
+
+  &__form-button {
+    width: 100%;
+    color: $primary;
+    font-family: Circe;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    background-color: $planText;
+    padding: 20px 10px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 5px;
+
+    @include laptop {
+      padding: 12px 10px;
+      font-size: 16px;
+    }
+  }
+
+  &__form-check {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    border: none;
+    font-size: 20px;
+    line-height: 1.2;
+
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+
+  &__form-text {
+    color: $registerInputPlaceholder;
+  }
+
+  &__form-link {
+    text-decoration: underline;
+  }
+
+  &__input {
     background-color: $registerInputBG;
     border: none;
     font-family: Circe;
@@ -6,150 +217,19 @@
     padding: 20px 24px;
     font-size: 20px;
     font-weight: 400;
-    line-height: 24px;
-    width: 203px;
+    line-height: 1.2px;
+    width: 100%;
 
-    @include tablet {
-        width: 145px;
-        
+    &::placeholder {
+      color: $registerInputPlaceholder;
     }
-}
-
-.registration-input::placeholder {
-    color: $registerInputPlaceholder;
-
-}
-
-.registration {
-
-    padding: 140px 0 70px 0;
 
     @include laptop {
-        padding: 80px 0 70px 0;
+      font-size: 16px;
     }
 
-    &__wrapper {
-        display: flex;
-        gap: 82px;
-        background-color: $planBG;
-        border-radius: 32px;
-        padding: 80px 80px 80px 60px;
+    &_max {
+      grid-column: 1/-1;
     }
-
-    &__text {
-
-        &-title {
-            color: $white;
-            font-size: 60px;
-            font-weight: 400;   
-            line-height: 66px;
-            margin-bottom: 24px;            
-        }
-    }
-
-    &__promo {
-        margin-bottom: 52px;
-    }
-
-    &-list{
-        
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        &__item{
-            display: flex;
-            gap: 8px;
-            padding: 12px 18px;
-            border-radius: 64px;
-            background-color: $registerList;
-            margin-bottom: 8px;
-
-
-            &-icon {
-                height: 24px;
-                width: 24px;
-            }
-
-            &-text {
-                color: $white;
-                font-weight: 400;
-                font-size: 20px;
-                line-height: 24px;
-            }
-        }
-
-        &__item:last-child {
-            margin-bottom: 0;
-        } 
-    }
-
-    &__form {
-
-        width: 480px;
-
-        &-wrapper {
-
-        }
-
-        &-title {
-            color: $primary;
-            font-family: Circe;
-            font-size: 40px;
-            font-weight: 400;
-            line-height: 44px;
-            padding: 20px 30px;
-            background: linear-gradient(244.87deg, rgba(250, 209, 38, 0.996) 10.67%, #FF544F 173.75%);
-            border-radius: 32px 32px 0 0;
-            text-align: center;
-        }
-
-        &-fields {
-            display: flex;
-            flex-wrap: wrap;
-            border: none;
-            gap: 8px;
-            border-radius: 0 0 32px 32px;
-            background-color: $white;
-            padding: 40px 32px;
-        }
-
-        &-email {
-            flex-basis: 100%;
-        }
-
-        &-button {
-            color: $primary;
-            font-family: Circe;
-            font-size: 20px;
-            font-weight: 700;
-            line-height: 24px;
-            background-color: $planText;
-            padding: 20px 10px;
-            border-radius: 8px;
-            flex-basis: 100%;
-            border: none;
-            margin-bottom: 5px;
-            width: 415px;
-        }
-
-        &-check {
-            display: flex;
-            align-items: baseline;
-            gap: 6px;
-            border: none;
-            // font-family: Circe;
-            font-size: 20px;
-            line-height: 120%;
-        }
-
-        &-text {
-            color: $registerInputPlaceholder;
-        }
-
-        &-link {
-            text-decoration: underline;
-        }
-    }
-
+  }
 }
