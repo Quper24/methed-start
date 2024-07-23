@@ -5,6 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="img/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="img/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="img/icons/favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#202639">
+  <meta name="msapplication-TileColor" content="#1D2B35">
+  <meta name="theme-color" content="#1D2B35">
   <title>Онлайн-интенсив по Frontend-разработке - онлайн школа Methed</title>
   <link rel="preload" href="/fonts/Circe-Bold.woff2" as="font" type="font/woff2"
     crossorigin="">
@@ -17,7 +27,7 @@
 <body>
   <header class="header">
     <div class="container">
-      <img class="header__logo" src="/img/logo.svg" alt="Логотип Methed">
+      <img class="header__logo" src="img/logo.svg" alt="Логотип Methed">
     </div>
   </header>
 
@@ -595,7 +605,7 @@
             </ul>
           </div>
 
-          <form class="registration__form" action="#">
+          <div class="registration__form">
             <div class="registration__form-title-wrapper">
               <h3 class="registration__form-title">
                 До&nbsp;старта интенсива осталось
@@ -605,7 +615,7 @@
               </h3>
             </div>
             <div class="registration__bottom-form">
-              <fieldset class="registration__form-fields">
+              <!-- <fieldset class="registration__form-fields">
                 <input type="text" name="name"
                   class="registration__form-name registration__input"
                   placeholder="Имя">
@@ -629,9 +639,21 @@
                   </a>
                   на обработку своих персональных данных
                 </label>
-              </fieldset>
+              </fieldset> -->
+
+              <!-- форма сейзбота -->
+              <script src='https://salebot.pro/js/salebot_tilda.js'></script>
+              <div class='salebot_tilda_block'></div>
+              <script>
+                SalebotTildaIntegration.init({
+                  project_id: 99094,
+                  guid: '9de7d234a77b073ee024d4c01b95cd5b'
+                })
+              </script>
             </div>
-          </form>
+
+          </div>
+
         </div>
       </div>
     </section>
@@ -715,7 +737,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__wrapper">
-        <img class="footer__logo" src="/img/logo-methed-white.svg"
+        <img class="footer__logo" src="img/logo-methed-white.svg"
           alt="Логотип Methed">
 
 
@@ -726,7 +748,9 @@
         <div class="footer__social">
           <ul class="footer__social-list">
             <li class="footer__social-item">
-              <a href="#" class="footer__social-link link-youtube">
+              <a href="https://www.youtube.com/@my.methed" target="_blank"
+                aria-label="Youtube канал Methed"
+                class="footer__social-link link-youtube">
                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -739,7 +763,9 @@
               </a>
             </li>
             <li class="footer__social-item">
-              <a href="#" class="footer__social-link link-telegram">
+              <a href="https://t.me/methed_bot" target="_blank"
+                aria-label="Свяжись с нами в телеграм"
+                class="footer__social-link link-telegram">
                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_35_435)">
@@ -764,7 +790,9 @@
               </a>
             </li>
             <li class="footer__social-item">
-              <a href="" class="footer__social-link link-vk">
+              <a href="https://vk.com/methed" target="_blank"
+                aria-label="группа в вконтакте"
+                class="footer__social-link link-vk">
                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <rect width="60" height="60" rx="30" fill="#0178B7" />

@@ -12,7 +12,7 @@
       content: "";
       flex-basis: 434px;
       flex-grow: 0;
-      background-image: url("/img/man-with-notebook.png");
+      background-image: url("../img/man-with-notebook.png");
       background-size: contain;
       background-position: bottom;
       background-repeat: no-repeat;
@@ -81,13 +81,13 @@
     background-repeat: no-repeat;
 
     &_date {
-      background-image: url("/img/clock.svg");
+      background-image: url("../img/clock.svg");
     }
     &_practice {
-      background-image: url("/img/monitor.svg");
+      background-image: url("../img/monitor.svg");
     }
     &_curator {
-      background-image: url("/img/frame.svg");
+      background-image: url("../img/frame.svg");
     }
 
     @include laptop {
