@@ -1,23 +1,29 @@
-import "./main.scss";
-
-import Swiper from "swiper";
 import "swiper/scss";
-
+import "./main.scss";
+import Swiper from "swiper";
 new Swiper(".reviews__slider", {
-  slidesPerView: 1,
-  spaceBetween: 10,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
+  slidesPerView: "auto",
   breakpoints: {
-    620: {
-      slidesPerView: 2,
-      spaceBetween: 10,
+    576: {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      loop: true,
     },
-    980: {
-      slidesPerView: 2,
-      spaceBetween: 12,
+    1024: {
+      slidesPerView: "auto",
+      spaceBetween: 26,
+      loop: true,
     },
     1240: {
-      slidesPerView: 3,
-      spaceBetween: 32,
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      loop: true,
     },
   },
 });

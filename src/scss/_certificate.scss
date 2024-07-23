@@ -1,19 +1,31 @@
 .certificate {
   background-color: $headerItemBG;
 
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   &__wrapper {
     display: flex;
 
-    @include laptop {
+    @include tablet {
       flex-direction: column-reverse;
       align-items: center;
+      gap: 16px;
     }
+  }
+
+  &__text-subtitle {
+    margin-bottom: 10px;
   }
 
   &__text {
     flex-basis: 744px;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
+    align-items: start;
     justify-content: center;
 
     @include laptop {
@@ -23,17 +35,21 @@
     @include tablet {
       flex-basis: auto;
       text-align: center;
+      align-items: center;
     }
   }
 
   &__title {
-    padding-top: 30px;
     margin-bottom: 52px;
 
-    @include laptop {
-      padding-top: 65px;
-      font-size: 46px;
+    @include tablet {
+      font-size: 40px;
       line-height: 1.1;
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      margin-bottom: 24px;
     }
 
     @include mobile {
@@ -72,13 +88,27 @@
     @include laptop {
       width: 220px;
       height: 43px;
-      align-self: center;
+    }
+
+    @include tablet {
+      width: 100%;
+      height: 43px;
     }
   }
 
   &__image {
     @include laptop {
+      flex-basis: 386px;
+      flex-grow: 1;
+    }
+
+    @include tablet {
       max-width: 344px;
+      flex-basis: auto;
+    }
+
+    @include mobile {
+      max-width: 72.22%;
     }
 
     &-photo {

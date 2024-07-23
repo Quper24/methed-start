@@ -29,6 +29,11 @@
       line-height: 110%;
       margin-bottom: 24px;
     }
+
+    @include mobile {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
   }
 
   &__list {
@@ -38,7 +43,7 @@
     margin-bottom: 50px;
 
     @include laptop {
-      gap: 13px 40px;
+      gap: 12px 20px;
       margin-bottom: 32px;
     }
 

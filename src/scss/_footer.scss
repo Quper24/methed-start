@@ -1,36 +1,93 @@
 .footer {
-    background-color: $planBG;
-    padding: 80px 0 44px 0;
-    color: $footerText;
-    
-    &__wrapper {
-        display: flex;
-        justify-content: space-between;
+  background-color: $planBG;
+  padding: 80px 0 44px 0;
+  color: $footerText;
+
+  @include laptop {
+    padding: 60px 0 46px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    gap: 34px;
+
+    grid-template-areas:
+      "logo social"
+      "copyright developer";
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      grid-template-areas:
+        "logo"
+        "social"
+        "copyright"
+        "developer";
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+
+    @include laptop {
+      width: 220px;
+    }
+  }
+
+  &__copyright {
+    grid-area: copyright;
+    font-size: 20px;
+    line-height: 1.2;
+    align-self: end;
+
+    @include laptop {
+      font-size: 16px;
     }
 
-    &__logo {
-        margin-bottom: 90px;
+    @include mobile {
+      align-self: start;
+    }
+  }
+
+  &__social {
+    grid-area: social;
+
+    @include mobile {
+      padding: 24px 0;
+      justify-self: start;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__social-link {
+    display: inline-block;
+    line-height: 0;
+    width: 60px;
+    height: 60px;
+
+    @include laptop {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__developer {
+    grid-area: developer;
+    font-size: 20px;
+    line-height: 1.2;
+    justify-self: end;
+
+    @include laptop {
+      font-size: 16px;
     }
 
-    &__copyright {
-
-        &-text {
-            font-size: 20px;
-        }
+    @include mobile {
+      justify-self: start;
     }
-
-    &__social {
-
-        &-list {
-            display: flex;
-            gap: 24px;
-            margin-bottom: 40px;
-        }
-
-        &-text {
-            font-size: 20px;
-            line-height: 120%;
-            width: 300px;
-        }
-    }
+  }
 }

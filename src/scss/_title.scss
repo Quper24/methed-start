@@ -16,32 +16,27 @@
 
   @include mobile {
     font-size: 28px;
+    margin-bottom: 8px;
   }
 
   &-subtext {
     font-weight: 400;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 1.2;
     margin-bottom: 52px;
     color: #605f5f;
 
     @include laptop {
       font-size: 16px;
-      line-height: 120%;
       margin-bottom: 40px;
     }
 
-    @include tablet {
-      font-size: 16px;
-      line-height: 120%;
+    @include mobile {
+      margin-bottom: 24px;
     }
   }
 
   &-text {
-    @include laptop {
-      margin-bottom: 16px;
-    }
-
     &_subtitle {
       display: block;
     }

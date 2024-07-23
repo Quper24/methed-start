@@ -1,28 +1,69 @@
 .gift {
-  padding-bottom: 115px;
+  padding-bottom: 135px;
+
+  @include laptop {
+    padding-bottom: 100px;
+  }
+
+  @include tablet {
+    padding-bottom: 80px;
+  }
+
+  @include mobile {
+    padding-bottom: 60px;
+  }
 
   &__wrapper {
+    position: relative;
+    min-height: 381px;
     display: flex;
-    gap: 110px;
     align-items: center;
 
     @include laptop {
-      gap: 40px;
+      min-height: 292px;
     }
 
     @include tablet {
       flex-direction: column-reverse;
+      gap: 24px;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      width: 381px;
+      height: 381px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 32px;
+      background-image: url("/img/bonus.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include laptop {
+        width: 292px;
+        height: 292px;
+        right: -26px;
+      }
+
+      @include tablet {
+        position: static;
+        transform: none;
+        width: 194px;
+        height: 194px;
+      }
     }
   }
 
-  &__icon {
-    width: 381px;
-    @include laptop {
-      width: 292px;
-    }
+  &__text {
+    max-width: 802px;
 
     @include tablet {
-      width: 194px;
+      text-align: center;
+      max-width: 100%;
+      width: 100%;
     }
   }
 
@@ -56,10 +97,16 @@
     }
   }
 
+  &__text-subtitle {
+    @include mobile {
+      display: inline;
+    }
+  }
+
   &__button {
     display: block;
-    margin: 0 auto;
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
     height: 64px;
     font-size: 20px;
     line-height: 1.2;
@@ -68,7 +115,11 @@
       font-size: 16px;
       line-height: 120%;
       height: 43px;
-      width: 220px;
+      max-width: 220px;
+    }
+
+    @include tablet {
+      max-width: 100%;
     }
   }
 }

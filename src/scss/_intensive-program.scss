@@ -5,6 +5,15 @@
     padding-top: 100px;
   }
 
+  @include tablet {
+    padding-top: 80px;
+  }
+
+  @include mobile {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
   &__wrapper {
     background-color: $planBG;
     display: flex;
@@ -17,10 +26,6 @@
       padding: 60px 40px;
     }
 
-    @include tablet {
-      padding: 60px 40px;
-    }
-
     @include mobile {
       padding: 40px 20px;
     }
@@ -30,11 +35,15 @@
     text-align: center;
     color: $white;
     margin-bottom: 73px;
+    line-height: 1.1;
 
     @include laptop {
       font-size: 48px;
-      line-height: 110%;
       margin-bottom: 50px;
+    }
+
+    @include tablet {
+      font-size: 40px;
     }
 
     @include mobile {
@@ -43,6 +52,7 @@
       line-height: 1.1;
       text-align: center;
       color: #fff;
+      margin-bottom: 42px;
     }
   }
 
@@ -52,22 +62,28 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
+    max-width: 585px;
 
     @include laptop {
       font-size: 16px;
       line-height: 120%;
+    }
+
+    @include mobile {
+      padding-top: 16px;
     }
   }
 
   &__list {
     display: flex;
     justify-content: center;
-    gap: 39px 20px;
+    gap: 55px 32px;
     flex-wrap: wrap;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 
     @include laptop {
       margin-bottom: 32px;
+      gap: 39px 20px;
     }
   }
 
@@ -82,14 +98,15 @@
     gap: 20px;
     position: relative;
 
-    @include laptop {
-      max-width: 380px;
-
+    @include tablet {
+      max-width: 100%;
+      width: 100%;
       padding: 40px 32px 32px;
     }
 
     @include mobile {
       padding: 32px 16px 20px;
+      gap: 12px;
     }
 
     &-counter {
@@ -100,16 +117,15 @@
       color: $primary;
       font-size: 20px;
       font-weight: 700;
-      line-height: 24px;
+      line-height: 1.2;
       background-color: $programCounter;
       border-radius: 50px;
-      width: 120px;
       padding: 11px 30px;
 
       @include laptop {
+        top: -19px;
         font-size: 16px;
-        line-height: 120%;
-        width: 106px;
+        padding: 8px 20px;
       }
     }
 
@@ -122,18 +138,36 @@
         font-size: 28px;
         line-height: 110%;
       }
+
+      @include mobile {
+        font-size: 22px;
+      }
+    }
+
+    &_bonus {
+      padding-bottom: 50px;
     }
   }
 
   &__form {
     width: 100%;
   }
+
+  &__button {
+    padding: 12px 4px;
+    font-size: 16px;
+  }
 }
 .program-wrapper {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @include mobile {
+    gap: 8px;
+  }
 }
+
 .program-list {
   &__item {
     background-image: url(../img/dot.png);
@@ -180,5 +214,9 @@
     background-repeat: no-repeat;
     padding-left: 22px;
     margin-bottom: 10px;
+
+    @include mobile {
+      margin-bottom: 6px;
+    }
   }
 }
