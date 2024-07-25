@@ -141,6 +141,8 @@ iframe {
 }
 
 .button {
+  display: block;
+  text-align: center;
   color: $primary;
   width: 100%;
   padding: 20px 10px;
@@ -162,3 +164,46 @@ iframe {
 .no-wrap {
   white-space: nowrap;
 }
+
+// .create_order_salebot_crm,
+// .create_quizz_btn {
+//   background-color: #ffc718 !important;
+//   color: #1e212a !important;
+//   font-size: 20px !important;
+
+//   @include laptop {
+//     font-size: 16px !important;
+//   }
+// }
+
+// .salebot_tilda_block,
+// #salebot_tilda_block,
+// .minilanding__quiz-box + .link_group,
+// .minilanding__quiz-box + .salebot-privacy,
+// .salebot-privacy + .link_group,
+// .ml_quiz,
+// #user-data-form .justify-content-center .wh-form-field .form-control {
+//   font-family: Circe !important;
+// }
+
+// .salebot-privacy__span,
+// .salebot-privacy__link,
+// #user-data-form .justify-content-center .wh-form-field .form-control,
+// #user-data-form
+//   .justify-content-center
+//   .wh-form-field
+//   .form-control::placeholder {
+//   font-size: 20px !important;
+//   @include laptop {
+//     font-size: 16px !important;
+//   }
+// }
+// .salebot-checkbox > input[type="checkbox"] {
+//   flex-shrink: 0;
+// }
+// .salebot-privacy
+//   .salebot-checkbox
+//   input.privacy_input[type="checkbox"]:checked {
+//   box-shadow: 0px 0px 0px 1px #ffc718 !important;
+//   background: #ffc718 !important;
+// }

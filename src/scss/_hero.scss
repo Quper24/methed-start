@@ -32,10 +32,14 @@
       }
 
       @include mobile {
-        width: 164px;
-        height: 214px;
+        width: 300px;
+        height: 380px;
         right: 35px;
         bottom: -6px;
+      }
+
+      @media (max-width: 480px) {
+        width: 51vw;
       }
     }
   }

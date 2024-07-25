@@ -25,6 +25,10 @@
 </head>
 
 <body>
+  <!-- Установи здесь время в формате 'ГГГГ-ММ-ДД' или 'ГГГГ-ММ-ДДTЧЧ:ММ:СС' -->
+  <input id="date-start" type="hidden" name="date-start"
+    value="2024-07-29T06:00:00">
+
   <header class="header">
     <div class="container">
       <img class="header__logo" src="img/logo.svg" alt="Логотип Methed">
@@ -58,7 +62,7 @@
               опытного разработчика, даже если никогда не&nbsp;программировали
             </p>
             <ul class="hero__list">
-              <li class="hero__list-item hero__list-item_date">
+              <li class="hero__list-item hero__list-item_date date-course">
                 20-27 июля
               </li>
               <li class="hero__list-item hero__list-item_practice">
@@ -125,9 +129,9 @@
               Бесплатно!
             </span>
           </p>
-          <button class="button" type="button">
+          <a href="#registration" class="button">
             Зарегистрироваться
-          </button>
+          </a>
         </div>
       </div>
     </section>
@@ -148,9 +152,9 @@
               50&nbsp;способов как найти работу или заказ для
               Фронтенд-разработчика
             </p>
-            <button class="button gift__button" type="button">
+            <a href="#registration" class="button gift__button">
               Зарегистрироваться
-            </button>
+            </a>
           </div>
 
         </div>
@@ -523,9 +527,9 @@
               </div>
             </li>
           </ul>
-          <button class="button intensive-program__button" type="button">
+          <a href="#registration" class="button intensive-program__button">
             Зарегистрироваться на&nbsp;интенсив
-          </button>
+          </a>
         </div>
       </div>
     </section>
@@ -540,7 +544,11 @@
             этот проект
           </span>
         </h2>
-        <img src="img/content.jpg" alt="Проект Cup-Time">
+
+        <div class="project-view__site">
+          <img src="img/site.jpg" alt="Проект Cup-Time">
+        </div>
+
       </div>
     </section>
 
@@ -562,9 +570,9 @@
                 заданий.
               </span>
             </h2>
-            <button class="button certificate__button" type="button">
+            <a href="#registration" class="button certificate__button">
               Хочу на&nbsp;интенсив!
-            </button>
+            </a>
           </div>
           <div class="certificate__image">
             <img src="img/certificate.png" alt="изображение сертификата"
@@ -591,7 +599,8 @@
               </span>
             </p>
             <ul class="registration-list">
-              <li class="registration-list__item registration-list__item_date">
+              <li
+                class="registration-list__item registration-list__item_date date-course">
                 20-27 июля</li>
               <li
                 class="registration-list__item registration-list__item_practice">
@@ -605,14 +614,15 @@
             </ul>
           </div>
 
-          <div class="registration__form">
+          <div class="registration__form" id="registration">
             <div class="registration__form-title-wrapper">
               <h3 class="registration__form-title">
                 До&nbsp;старта интенсива осталось
-                <span class="timer">
-                  00:00:00
-                </span>
+
               </h3>
+              <p class="registration__form-title timer">
+                00:00:00
+              </p>
             </div>
             <div class="registration__bottom-form">
               <!-- <fieldset class="registration__form-fields">
@@ -647,7 +657,7 @@
               <script>
                 SalebotTildaIntegration.init({
                   project_id: 99094,
-                  guid: '9de7d234a77b073ee024d4c01b95cd5b'
+                  guid: '016c6980a18080748d38285a3144f50a'
                 })
               </script>
             </div>
@@ -666,36 +676,43 @@
           </h2>
           <div class="reviews__slider swiper">
             <ul class="reviews__slider-list swiper-wrapper">
+
               <li class="swiper-slide reviews__slide">
                 <div class="reviews__slider-item">
                   <img src="img/man-pink-avatar.png" alt="фотография участника"
                     class="reviews__slider-avatar">
                   <h3 class="reviews__slider-title">
-                    Антон Шахов
+                    Павел
                   </h3>
                   <p class="reviews__slider-text">
-                    Мой путь до&nbsp;трудоустройства фронтенд-разработчиком
-                    занял примерно год. Сюда входит время прохождения курсов
-                    и&nbsp;попытки самостоятельного изучения материала.
+                    Очень интересный интенсив и очень полезный контент для меня,
+                    так как до этого ничего подобного не делал,
+                    но теперь я начал лучше понимать суть будущей профессии и
+                    понял что мне это действительно нравится.
+                    Продолжайте в том же духе, контент очень полезный!!!
                   </p>
-
                 </div>
               </li>
+
               <li class="swiper-slide reviews__slide">
                 <div class="reviews__slider-item"> <img
-                    src="img/girl-glass-avatar.png" alt="фотография участника"
+                    src="img/man-red-avatar.png" alt="фотография участника"
                     class="reviews__slider-avatar">
                   <h3 class="reviews__slider-title">
-                    Антон Шахов
+                    Константин Rubenkov
                   </h3>
                   <p class="reviews__slider-text">
-                    Мой путь до&nbsp;трудоустройства фронтенд-разработчиком
-                    занял примерно год. Сюда входит время прохождения курсов
-                    и&nbsp;попытки самостоятельного изучения материала.
+                    Хочу выразить огромную благодарность и сказать спасибо за
+                    этот интенсив и ваш труд!
+                    Очень хотелось углубиться в JS и этот интенсив то что нужно
+                    мне как новичку!
+                    Огромное спасибо Максиму, администраторам и дизайнеру.
+                    Отдельно стоит отметить дополнительные материалы и знания,
+                    которые нам открывает Максим на трансляциях!
                   </p>
-
                 </div>
               </li>
+
               <li class="swiper-slide reviews__slide">
                 <div class="reviews__slider-item">
                   <img src="img/man-beard-avatar.png" alt="фотография участника"
@@ -708,24 +725,66 @@
                     занял примерно год. Сюда входит время прохождения курсов
                     и&nbsp;попытки самостоятельного изучения материала.
                   </p>
-
                 </div>
               </li>
+
               <li class="swiper-slide reviews__slide">
                 <div class="reviews__slider-item">
                   <img src="img/man-red-avatar.png" alt="фотография участника"
                     class="reviews__slider-avatar">
                   <h3 class="reviews__slider-title">
-                    Антон Шахов
+                    Bodo Guri
                   </h3>
                   <p class="reviews__slider-text">
-                    Мой путь до&nbsp;трудоустройства фронтенд-разработчиком
-                    занял примерно год. Сюда входит время прохождения курсов
-                    и&nbsp;попытки самостоятельного изучения материала.
+                    Мега крутой интенсив. Много нового и занятного. Больше
+                    интенсивов на vite и с препроцессорами. Вы просто best of
+                    the best
                   </p>
-
                 </div>
               </li>
+
+              <li class="swiper-slide reviews__slide">
+                <div class="reviews__slider-item">
+                  <img src="img/man-pink-avatar.png" alt="фотография участника"
+                    class="reviews__slider-avatar">
+                  <h3 class="reviews__slider-title">
+                    денис
+                  </h3>
+                  <p class="reviews__slider-text">
+                    мне очень понравился данный интенсив, проходил его с
+                    удовольствием
+                  </p>
+                </div>
+              </li>
+
+              <li class="swiper-slide reviews__slide">
+                <div class="reviews__slider-item">
+                  <img src="img/man-beard-avatar.png" alt="фотография участника"
+                    class="reviews__slider-avatar">
+                  <h3 class="reviews__slider-title">
+                    Никита Иванько
+                  </h3>
+                  <p class="reviews__slider-text">
+                    Интенсив оказался очень полезным, сильно заинтересовал и
+                    замотивировал развиваться в данной сфере
+                    Огромное всем спасибо за ваши труды)))
+                  </p>
+                </div>
+              </li>
+
+              <li class="swiper-slide reviews__slide">
+                <div class="reviews__slider-item">
+                  <img src="img/man-red-avatar.png" alt="фотография участника"
+                    class="reviews__slider-avatar">
+                  <h3 class="reviews__slider-title">
+                    Валерий Побеленкий
+                  </h3>
+                  <p class="reviews__slider-text">
+                    Спасибо огромное за кучу полезной и познавательной инфы
+                  </p>
+                </div>
+              </li>
+
             </ul>
           </div>
         </div>

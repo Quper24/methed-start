@@ -24,4 +24,14 @@
       margin-bottom: 16px;
     }
   }
+
+  &__site {
+    border: 10px solid #ededed;
+    border-radius: 32px;
+    max-width: 100%;
+    width: 1320px;
+    height: 60vw;
+    overflow-y: auto;
+    font-size: 0;
+  }
 }
